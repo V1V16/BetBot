@@ -1,0 +1,48 @@
+name: BET ValueBot
+
+on:
+  workflow_dispatch: {}       # para lanzarlo a mano
+  schedule:
+    - cron: "*/10 * * * *"    # cada 10 min (UTC)
+
+concurrency:
+  group: betbot
+  cancel-in-progress: true
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then
+            pip install -r requirements.txt
+          else
+            pip install requests python-dotenv pandas
+          fi
+
+      - name: Run bot
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python main.py
+
+      - name: Save CSV (artifact)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: valuebets_csv
+          path: valuebets_resultados.csv
+          if-no-files-found: ignore
+          retention-days: 1
