@@ -1,0 +1,27 @@
+liga,evento,fecha,mercado,opcion,pinnacle,sport888,prob_real,EV,stake
+soccer_france_ligue_two,USL Dunkerque vs Clermont,2025-08-09T18:00:00Z,h2h,Clermont,3.24,3.5,0.30864197530864196,0.08024691358024683,8.02
+soccer_usa_mls,Orlando City SC vs Inter Miami CF,2025-08-11T00:00:00Z,h2h,Orlando City SC,1.74,1.85,0.5747126436781609,0.06321839080459779,6.32
+soccer_usa_mls,St. Louis City SC vs Nashville SC,2025-08-10T00:30:00Z,h2h,St. Louis City SC,3.11,3.3,0.3215434083601286,0.06109324758842449,6.11
+soccer_usa_mls,New York Red Bulls vs Real Salt Lake,2025-08-10T22:00:00Z,h2h,Real Salt Lake,3.15,3.3,0.31746031746031744,0.04761904761904745,4.76
+soccer_france_ligue_two,Troyes vs Grenoble,2025-08-09T18:00:00Z,h2h,Grenoble,4.59,4.8,0.2178649237472767,0.045751633986928164,4.58
+soccer_usa_mls,New York City FC vs Columbus Crew SC,2025-08-09T23:30:00Z,h2h,New York City FC,2.43,2.5,0.4115226337448559,0.028806584362139898,2.88
+soccer_usa_mls,FC Dallas vs Portland Timbers,2025-08-10T00:30:00Z,h2h,FC Dallas,2.09,2.15,0.47846889952153115,0.028708133971292016,2.87
+soccer_usa_mls,CF Montreal vs Atlanta United FC,2025-08-09T23:30:00Z,h2h,Atlanta United FC,2.82,2.9,0.3546099290780142,0.028368794326241176,2.84
+soccer_turkey_super_league,Kayserispor vs Besiktas JK,2025-08-10T18:30:00Z,h2h,Besiktas JK,1.76,1.8,0.5681818181818182,0.02272727272727293,2.27
+soccer_usa_mls,FC Cincinnati vs Charlotte FC,2025-08-10T22:00:00Z,h2h,Charlotte FC,4.24,4.33,0.23584905660377356,0.021226415094339535,2.12
+soccer_france_ligue_two,Pau FC vs Annecy FC,2025-08-09T18:00:00Z,h2h,Pau FC,2.4,2.45,0.4166666666666667,0.02083333333333348,2.08
+soccer_usa_mls,Minnesota United FC vs Colorado Rapids,2025-08-10T22:00:00Z,h2h,Colorado Rapids,4.91,5.0,0.20366598778004072,0.018329938900203624,1.83
+soccer_usa_mls,San Jose Earthquakes vs Vancouver Whitecaps FC,2025-08-10T02:30:00Z,h2h,San Jose Earthquakes,2.21,2.25,0.45248868778280543,0.018099547511312153,1.81
+soccer_france_ligue_two,Montpellier vs Red Star,2025-08-09T18:00:00Z,h2h,Montpellier,1.92,1.95,0.5208333333333334,0.015625,1.56
+soccer_turkey_super_league,Eyüpspor vs Torku Konyaspor,2025-08-10T16:00:00Z,h2h,Draw,3.25,3.3,0.3076923076923077,0.01538461538461533,1.54
+soccer_usa_mls,Austin FC vs Houston Dynamo,2025-08-10T00:30:00Z,h2h,Houston Dynamo,3.35,3.4,0.29850746268656714,0.01492537313432818,1.49
+soccer_epl,Manchester United vs Arsenal,2025-08-17T15:30:00Z,h2h,Arsenal,2.07,2.1,0.48309178743961356,0.01449275362318847,1.45
+soccer_turkey_super_league,Trabzonspor vs Kocaelispor,2025-08-11T18:30:00Z,h2h,Trabzonspor,1.58,1.6,0.6329113924050632,0.012658227848101111,1.27
+soccer_epl,Leeds United vs Everton,2025-08-18T19:00:00Z,h2h,Draw,3.21,3.25,0.3115264797507788,0.012461059190031154,1.25
+soccer_france_ligue_two,Amiens vs Stade de Reims,2025-08-11T18:45:00Z,h2h,Draw,3.36,3.4,0.2976190476190476,0.011904761904761862,1.19
+soccer_france_ligue_two,Guingamp vs Le Mans FC,2025-08-09T12:00:00Z,h2h,Guingamp,1.69,1.7,0.591715976331361,0.00591715976331364,1.0
+soccer_turkey_super_league,Samsunspor vs Genclerbirligi SK,2025-08-09T16:00:00Z,h2h,Samsunspor,1.74,1.75,0.5747126436781609,0.005747126436781436,1.0
+soccer_usa_mls,New England Revolution vs D.C. United,2025-08-09T23:30:00Z,h2h,New England Revolution,1.74,1.75,0.5747126436781609,0.005747126436781436,1.0
+soccer_usa_mls,Sporting Kansas City vs San Diego FC,2025-08-10T00:45:00Z,h2h,San Diego FC,1.94,1.95,0.5154639175257733,0.005154639175257714,1.0
+soccer_turkey_super_league,Antalyaspor vs Kasimpasa SK,2025-08-09T18:30:00Z,h2h,Kasimpasa SK,2.49,2.5,0.4016064257028112,0.00401606425702794,1.0
+soccer_epl,Liverpool vs Bournemouth,2025-08-15T19:00:00Z,h2h,Bournemouth,7.99,8.0,0.1251564455569462,0.0012515644555695093,1.0
