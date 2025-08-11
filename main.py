@@ -10,20 +10,20 @@ import pandas as pd
 from dotenv import load_dotenv
 
 # =========================
-# Parámetros (ajústalos aquí)
+# Parámetros (perfil PRUEBAS)
 # =========================
 # EV mínimo por mercado (no-vig con Pinnacle)
-EV_MIN_H2H = 0.04         # 4% para H2H
-EV_MIN_LINES = 0.05        # 5% para Totals/Spreads
+EV_MIN_H2H = 0.03          # 3% para H2H
+EV_MIN_LINES = 0.04        # 4% para Totals/Spreads
 
 # Rango de cuotas y probabilidad mínima (anti-longshots)
 ODDS_MIN = 1.25
-ODDS_MAX_H2H = 3.00
-ODDS_MAX_LINES = 2.60      # totals/spreads suelen rondar 1.80–2.20
-P_FAIR_MIN = 0.30          # prob. justa mínima (30%)
+ODDS_MAX_H2H = 3.25
+ODDS_MAX_LINES = 2.75
+P_FAIR_MIN = 0.25          # prob. justa mínima (25%)
 
 # Frescura (min desde last_update de la casa SOFT). 0 = desactivar
-FRESH_MAX_MIN = 240
+FRESH_MAX_MIN = 180        # 3h para abrir grifo pero con control
 
 # Ventana de evento
 EVENT_MAX_DAYS = 30
@@ -31,10 +31,10 @@ EVENT_MAX_DAYS = 30
 # Diferencia mínima soft - Pinnacle (0 = no exigir; el EV ya controla)
 MIN_DIFF_ODDS = 0.00
 
-# Umbral “consenso” anti-outliers entre softs
-OUTLIER_DIFF_CAP     = 0.15   # best_soft − second_best > 0.15 ⇒ sospechoso
-CONSENSUS_RATIO_CAP  = 1.12   # best_soft / mediana_soft > 1.12 ⇒ sospechoso
-EV_EXTRA_FOR_OUTLIER = 0.03   # permitir outlier solo si EV ≥ (umbral + 3pp)
+# Umbral “consenso” anti-outliers entre softs (aplica solo si n_soft >= 3)
+OUTLIER_DIFF_CAP     = 0.20   # best_soft − second_best > 0.20 ⇒ sospechoso
+CONSENSUS_RATIO_CAP  = 1.18   # best_soft / mediana_soft > 1.18 ⇒ sospechoso
+EV_EXTRA_FOR_OUTLIER = 0.03   # permitir outlier si EV ≥ (umbral + 3pp)
 
 # Kelly / banca (en unidades)
 KELLY_FRACTION = 0.25      # 25%
@@ -90,7 +90,7 @@ LEAGUE_MAP = {
 # =========================
 PINNACLE_KEY = "pinnacle"  # sharp
 
-# Softs disponibles en EU (según tu lista detectada)
+# Softs disponibles en EU/UK (las que nos interesan)
 SOFT_BOOKIES_TARGET = {
     "sport888", "betfair_ex_eu", "williamhill", "marathonbet",
     "betclic_fr", "unibet_fr", "unibet_it", "unibet_nl",
@@ -139,7 +139,7 @@ def to_local_str(iso_str: str) -> str:
         dt = dt.replace(tzinfo=timezone.utc)
     return dt.astimezone(TZ_LOCAL).strftime("%d/%m/%Y %H:%M")
 
-def parse_iso(iso_str: str) -> datetime:
+def parse_iso(iso_str: str)) -> datetime:
     dt = datetime.fromisoformat(iso_str.replace("Z", "+00:00"))
     if dt.tzinfo is None:
         dt = dt.replace(tzinfo=timezone.utc)
@@ -312,7 +312,7 @@ for sport in sports:
     url = f"https://api.the-odds-api.com/v4/sports/{sport}/odds/"
     params = {
         "apiKey": api_key,
-        "regions": "eu",            # mantenemos EU
+        "regions": "eu,uk",        # <- ampliamos cobertura
         "markets": ",".join(markets),
         "oddsFormat": "decimal",
         "dateFormat": "iso"
@@ -371,7 +371,7 @@ for sport in sports:
                         "book_last_update": book_last_update
                     })
 
-print("\n👀 Bookies detectadas en EU:", ", ".join(sorted(bookies_seen)))
+print("\n👀 Bookies detectadas:", ", ".join(sorted(bookies_seen)))
 print("✅ Cuotas recolectadas. Procesando...\n")
 if not rows:
     print("⚠️  No se recolectaron cuotas. Saliendo.")
@@ -408,7 +408,7 @@ df_pin["p_fair"] = df_pin["imp"] / df_pin["sum_imp"]
 # =========================
 df_soft = df[df["casa"].isin(SOFT_BOOKIES_TARGET)].copy()
 if df_soft.empty:
-    print("⚠️  No hay casas soft en EU de la lista. Saliendo.")
+    print("⚠️  No hay casas soft de la lista. Saliendo.")
     raise SystemExit(0)
 
 df_soft["odds_eff"] = df_soft.apply(lambda r: effective_odds(r["casa"], r["cuota"]), axis=1)
@@ -507,13 +507,14 @@ merged["consensus_ratio"]  = merged["odds_soft"] / merged["median_soft"]
 # =========================
 # Filtros
 # =========================
+now_utc = datetime.now(timezone.utc)
 mask = (
     (merged["EV"] >= merged["ev_min_req"]) &
     (merged["p_fair"] >= P_FAIR_MIN) &
     (merged["odds_soft"] >= ODDS_MIN) &
     (merged["odds_soft"] <= merged["odds_max_req"]) &
-    (merged["fecha_dt"] >= datetime.now(timezone.utc)) &
-    (merged["fecha_dt"] <= datetime.now(timezone.utc) + timedelta(days=EVENT_MAX_DAYS))
+    (merged["fecha_dt"] >= now_utc) &
+    (merged["fecha_dt"] <= now_utc + timedelta(days=EVENT_MAX_DAYS))
 )
 
 # Frescura (si está activada)
@@ -524,9 +525,9 @@ if FRESH_MAX_MIN and FRESH_MAX_MIN > 0:
 if MIN_DIFF_ODDS and MIN_DIFF_ODDS > 0:
     mask &= (merged["odds_diff"] >= MIN_DIFF_ODDS)
 
-# Filtro de consenso anti-outliers (solo si hay ≥2 softs)
+# Filtro de consenso anti-outliers (solo si hay ≥3 softs)
 mask_consensus = ~(
-    (merged["n_soft"] >= 2) & (
+    (merged["n_soft"] >= 3) & (
         (merged["best_minus_second"] > OUTLIER_DIFF_CAP) |
         (merged["consensus_ratio"]  > CONSENSUS_RATIO_CAP)
     ) & (merged["EV"] < merged["ev_min_req"] + EV_EXTRA_FOR_OUTLIER)
@@ -619,7 +620,7 @@ def format_pick_row(row) -> str:
     ]
     # Marca visual si era “muy fuera de consenso”
     if pd.notna(row.get("best_minus_second")) and pd.notna(row.get("consensus_ratio")):
-        if (row.get("n_soft", 0) >= 2) and (
+        if (row.get("n_soft", 0) >= 3) and (
             (row["best_minus_second"] > OUTLIER_DIFF_CAP) or (row["consensus_ratio"] > CONSENSUS_RATIO_CAP)
         ):
             parts.append("⚠️ Posible outlier vs consenso")
@@ -659,7 +660,7 @@ def send_telegram_messages(token: str, chat_id: str, texts):
 
 if valuebets.empty:
     send_telegram_messages(telegram_token, telegram_user_id, [
-        "🎯 0 apuestas con valor con los filtros actuales. Prueba en horas de mercado activo o ajusta límites/EV."
+        "🎯 0 apuestas con valor con los filtros PRUEBAS actuales. Seguimos en escucha…"
     ])
 else:
     mensajes = build_messages(valuebets)
