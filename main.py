@@ -139,7 +139,7 @@ def to_local_str(iso_str: str) -> str:
         dt = dt.replace(tzinfo=timezone.utc)
     return dt.astimezone(TZ_LOCAL).strftime("%d/%m/%Y %H:%M")
 
-def parse_iso(iso_str: str)) -> datetime:
+def parse_iso(iso_str: str) -> datetime:
     dt = datetime.fromisoformat(iso_str.replace("Z", "+00:00"))
     if dt.tzinfo is None:
         dt = dt.replace(tzinfo=timezone.utc)
