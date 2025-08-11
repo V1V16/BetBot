@@ -13,17 +13,17 @@ from dotenv import load_dotenv
 # Parámetros (ajústalos aquí)
 # =========================
 # EV mínimo por mercado (no-vig con Pinnacle)
-EV_MIN_H2H = 0.04          # 4% para H2H
+EV_MIN_H2H = 0.04         # 4% para H2H
 EV_MIN_LINES = 0.05        # 5% para Totals/Spreads
 
 # Rango de cuotas y probabilidad mínima (anti-longshots)
 ODDS_MIN = 1.25
 ODDS_MAX_H2H = 3.00
-ODDS_MAX_LINES = 2.50      # totals/spreads suelen rondar 1.80–2.20
+ODDS_MAX_LINES = 2.60      # totals/spreads suelen rondar 1.80–2.20
 P_FAIR_MIN = 0.30          # prob. justa mínima (30%)
 
 # Frescura (min desde last_update de la casa SOFT). 0 = desactivar
-FRESH_MAX_MIN = 120
+FRESH_MAX_MIN = 240
 
 # Ventana de evento
 EVENT_MAX_DAYS = 30
