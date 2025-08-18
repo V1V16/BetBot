@@ -1,0 +1,71 @@
+﻿liga,evento,fecha_local,mercado_linea,opcion,cuota,book_last_update
+soccer_spain_la_liga,Girona vs Rayo Vallecano,15/08/2025 19:00,1X2,HOME,2.35,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Girona vs Rayo Vallecano,15/08/2025 19:00,1X2,AWAY,3.28,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Girona vs Rayo Vallecano,15/08/2025 19:00,1X2,DRAW,3.31,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Girona vs Rayo Vallecano,15/08/2025 19:00,Hándicap 0.25,HOME,2.02,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Girona vs Rayo Vallecano,15/08/2025 19:00,Hándicap 0.25,AWAY,1.89,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Girona vs Rayo Vallecano,15/08/2025 19:00,Totales 2.25,OVER,1.88,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Girona vs Rayo Vallecano,15/08/2025 19:00,Totales 2.25,UNDER,2.0,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Villarreal vs Oviedo,15/08/2025 21:30,1X2,AWAY,8.85,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Villarreal vs Oviedo,15/08/2025 21:30,1X2,HOME,1.38,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Villarreal vs Oviedo,15/08/2025 21:30,1X2,DRAW,5.0,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Villarreal vs Oviedo,15/08/2025 21:30,Hándicap 1.25,AWAY,2.05,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Villarreal vs Oviedo,15/08/2025 21:30,Hándicap 1.25,HOME,1.87,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Villarreal vs Oviedo,15/08/2025 21:30,Totales 2.5,OVER,1.9,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Villarreal vs Oviedo,15/08/2025 21:30,Totales 2.5,UNDER,1.98,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Alavés vs Levante,16/08/2025 17:00,1X2,HOME,2.27,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Alavés vs Levante,16/08/2025 17:00,1X2,AWAY,3.63,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Alavés vs Levante,16/08/2025 17:00,1X2,DRAW,3.14,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Alavés vs Levante,16/08/2025 17:00,Hándicap 0.25,HOME,1.93,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Alavés vs Levante,16/08/2025 17:00,Hándicap 0.25,AWAY,1.97,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Alavés vs Levante,16/08/2025 17:00,Totales 2.0,OVER,2.05,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Alavés vs Levante,16/08/2025 17:00,Totales 2.0,UNDER,1.85,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Mallorca vs Barcelona,16/08/2025 19:30,1X2,AWAY,1.53,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Mallorca vs Barcelona,16/08/2025 19:30,1X2,HOME,5.97,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Mallorca vs Barcelona,16/08/2025 19:30,1X2,DRAW,4.59,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Mallorca vs Barcelona,16/08/2025 19:30,Hándicap 1.00,AWAY,1.89,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Mallorca vs Barcelona,16/08/2025 19:30,Hándicap 1.00,HOME,2.01,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Mallorca vs Barcelona,16/08/2025 19:30,Totales 2.75,OVER,1.86,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Mallorca vs Barcelona,16/08/2025 19:30,Totales 2.75,UNDER,2.03,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Valencia vs Real Sociedad,16/08/2025 21:30,1X2,AWAY,3.13,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Valencia vs Real Sociedad,16/08/2025 21:30,1X2,HOME,2.78,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Valencia vs Real Sociedad,16/08/2025 21:30,1X2,DRAW,2.83,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Valencia vs Real Sociedad,16/08/2025 21:30,Hándicap 0.00,AWAY,2.08,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Valencia vs Real Sociedad,16/08/2025 21:30,Hándicap 0.00,HOME,1.84,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Valencia vs Real Sociedad,16/08/2025 21:30,Totales 1.75,OVER,1.84,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Valencia vs Real Sociedad,16/08/2025 21:30,Totales 1.75,UNDER,2.06,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Celta Vigo vs Getafe,17/08/2025 17:00,1X2,HOME,1.69,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Celta Vigo vs Getafe,17/08/2025 17:00,1X2,AWAY,5.98,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Celta Vigo vs Getafe,17/08/2025 17:00,1X2,DRAW,3.58,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Celta Vigo vs Getafe,17/08/2025 17:00,Hándicap 0.75,HOME,1.93,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Celta Vigo vs Getafe,17/08/2025 17:00,Hándicap 0.75,AWAY,1.98,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Celta Vigo vs Getafe,17/08/2025 17:00,Totales 2.0,OVER,1.85,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Celta Vigo vs Getafe,17/08/2025 17:00,Totales 2.0,UNDER,2.05,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Athletic Bilbao vs Sevilla,17/08/2025 19:30,1X2,HOME,1.64,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Athletic Bilbao vs Sevilla,17/08/2025 19:30,1X2,AWAY,5.83,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Athletic Bilbao vs Sevilla,17/08/2025 19:30,1X2,DRAW,3.92,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Athletic Bilbao vs Sevilla,17/08/2025 19:30,Hándicap 0.75,HOME,1.83,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Athletic Bilbao vs Sevilla,17/08/2025 19:30,Hándicap 0.75,AWAY,2.08,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Athletic Bilbao vs Sevilla,17/08/2025 19:30,Totales 2.25,OVER,1.88,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Athletic Bilbao vs Sevilla,17/08/2025 19:30,Totales 2.25,UNDER,2.0,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Espanyol vs Atlético Madrid,17/08/2025 21:30,1X2,AWAY,1.53,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Espanyol vs Atlético Madrid,17/08/2025 21:30,1X2,HOME,6.94,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Espanyol vs Atlético Madrid,17/08/2025 21:30,1X2,DRAW,4.16,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Espanyol vs Atlético Madrid,17/08/2025 21:30,Hándicap 1.00,AWAY,1.93,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Espanyol vs Atlético Madrid,17/08/2025 21:30,Hándicap 1.00,HOME,1.97,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Espanyol vs Atlético Madrid,17/08/2025 21:30,Totales 2.25,OVER,1.88,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Espanyol vs Atlético Madrid,17/08/2025 21:30,Totales 2.25,UNDER,2.01,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Elche CF vs Real Betis,18/08/2025 21:00,1X2,HOME,3.13,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Elche CF vs Real Betis,18/08/2025 21:00,1X2,AWAY,2.36,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Elche CF vs Real Betis,18/08/2025 21:00,1X2,DRAW,3.39,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Elche CF vs Real Betis,18/08/2025 21:00,Hándicap 0.25,HOME,1.86,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Elche CF vs Real Betis,18/08/2025 21:00,Hándicap 0.25,AWAY,2.04,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Elche CF vs Real Betis,18/08/2025 21:00,Totales 2.25,OVER,1.84,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Elche CF vs Real Betis,18/08/2025 21:00,Totales 2.25,UNDER,2.04,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Real Madrid vs CA Osasuna,19/08/2025 21:00,1X2,AWAY,11.09,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Real Madrid vs CA Osasuna,19/08/2025 21:00,1X2,HOME,1.25,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Real Madrid vs CA Osasuna,19/08/2025 21:00,1X2,DRAW,6.3,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Real Madrid vs CA Osasuna,19/08/2025 21:00,Hándicap 1.75,AWAY,1.91,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Real Madrid vs CA Osasuna,19/08/2025 21:00,Hándicap 1.75,HOME,1.96,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Real Madrid vs CA Osasuna,19/08/2025 21:00,Totales 3.0,OVER,1.96,2025-08-12T08:21:46Z
+soccer_spain_la_liga,Real Madrid vs CA Osasuna,19/08/2025 21:00,Totales 3.0,UNDER,1.89,2025-08-12T08:21:46Z
