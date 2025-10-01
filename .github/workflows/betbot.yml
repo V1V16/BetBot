@@ -3,10 +3,10 @@ name: BET ValueBot
 on:
   workflow_dispatch: {}
   schedule:
-    - cron: "0 7-10 * * 1-5"        # L–V: 09–12 CEST (una vez por hora)  [UTC+2 -> 07–10 UTC]
-    - cron: "0 11-13 * * 1-5"       # L–V: 13–15 CEST (una vez por hora)  [UTC+2 -> 11–13 UTC]
-    - cron: "0,30 14-18 * * 1-5"    # L–V: 16–20 CEST, cada 30 min        [UTC+2 -> 14–18 UTC]
-    - cron: "*/15 7-18 * * 6,0"     # S–D: 09–20 CEST, cada 15 min        [UTC+2 -> 07–18 UTC]
+    # L–V: 10:00 Madrid (CEST = UTC+2 -> 08:00 UTC)
+    - cron: "0 8 * * 1-5"
+    # S–D: 11:00 y 17:00 Madrid (CEST = UTC+2 -> 09:00 y 15:00 UTC)
+    - cron: "0 9,15 * * 6,0"
 
 concurrency:
   group: betbot
